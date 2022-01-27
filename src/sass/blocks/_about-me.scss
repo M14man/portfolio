@@ -1,52 +1,58 @@
 .about-me {
-    min-height: 600px;
-    &__descr {
-        margin-bottom: 40px;
+    padding-top: 120px;
+    &__wrapper {
+        min-height: 600px;
+        display: grid;
+        grid-template-columns: 400px 670px;
+        grid-template-rows: repeat(2, minmax(240px, auto));
+        gap: 40px 70px;
+        grid-template-areas:
+            "photo text"
+            "photo feature";
     }
+    // min-height: 600px;
     &__subtitle {
         padding-left: 10px;
         position: relative;
         @include before_circle;
     }
+    &__descr {
+        margin-top: 20px;
+    }
 }
-
-.grid-container {
-    margin-top: 120px;
-    min-height: 600px;
-    display: grid;
-    grid-template-columns: 400px 570px;
-    grid-template-rows: minmax(160px, auto);
-    gap: 70px;
-}
-
-.grid-elem img {
+.about-me__img {
+    grid-area: photo;
     width: 100%;
-    // height: 100%;
 }
-
-.grid-container-mini {
-    width: 100%;
+.about-me__feature {
+    grid-area: feature;
     display: grid;
-    grid-template-columns: 260px 260px;
+    grid-template-columns: repeat(2, 260px);
     grid-template-rows: minmax(116px, auto);
     grid-auto-rows: minmax(116px, auto);
     gap: 20px 50px;
 }
 
-.grid-container-super-mini {
-    width: 100%;
+.about-me__text {
+    grid-area: text;
+    .devider {
+        margin-top: 0;
+    }
+}
+
+.about-me__feature__wrapper {
     display: grid;
     grid-template-columns: 40px 200px;
     grid-template-rows: minmax(116px, auto);
+    grid-auto-rows: minmax(116px, auto);
     column-gap: 20px;
 }
+
 .grid-elem-super-mini {
     &__subtitle {
-        position: relative;
         font-weight: bold;
         font-size: 14px;
         line-height: 21px;
-        @include before_circle-2;
     }
     &__descr {
         font-weight: 500;
@@ -55,6 +61,17 @@
     }
 }
 
-.grid-elem-super-mini img {
+.about-me__feature__wrapper__img img {
     height: 27px;
+}
+
+.about-me__feature__wrapper__img {
+    position: relative;
+    padding-top: 14px;
+    display: flex;
+    justify-content: end;
+    @include before_circle;
+    &:before {
+        top: 0;
+    }
 }
