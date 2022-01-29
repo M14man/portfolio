@@ -6,13 +6,16 @@
     height: 340px;
     z-index: 3;
     align-items: center;
-    top: 230px;
+    top: 210px;
     left: 50px;
     // background-color: #fff;
     &__link {
         &:hover {
-            svg path{
-                fill: red
+            // svg path{
+            //     fill: red
+            // }
+            svg {
+                transform: scale(1.2);
             }
         }
     }
@@ -23,14 +26,14 @@
         background-color: orange;
     }
     &__text {
-       height: 150px;
-       width: 25px;
-       span {
-           transform: rotate(-90deg) translate(-30%,-260%);
-           display: block;
-           width: 150px;
-           color: orange;
-        //    color: #fff;
-       } 
+        height: 150px;
+        width: 25px;
+        span {
+            transform: rotate(-90deg) translate(-30%, -260%);
+            display: block;
+            width: 150px;
+            color: orange;
+            //    color: #fff;
+        }
     }
 }

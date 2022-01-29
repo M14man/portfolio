@@ -1,7 +1,7 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url('../img/10.jpg') center (center/cover) no-repeat;
+    background: url("../img/10.jpg") center (center/cover) no-repeat;
     overflow: hidden;
     padding-top: 205px;
     &__title {
@@ -24,8 +24,9 @@
     &__link {
         color: white;
         font-weight: bold;
+        transition: all 0.5s;
         &:hover {
-            color: white;
+            color: $main-color;
             text-decoration: none;
         }
     }
